@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.LogInPage {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  .LogInPage__wrapper {
+    width: 500px;
+    height: 500px;
+    background-color: $primary;
+    color: white;
+  }
+}
