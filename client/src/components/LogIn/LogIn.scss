@@ -7,8 +7,53 @@
 
   .LogInPage__wrapper {
     width: 500px;
-    height: 500px;
-    background-color: $primary;
+    background-color: $dark-primary;
     color: white;
+    border-radius: $radius-px;
+    padding: 50px 30px;
+
+    .LogInPage__title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .LogInPage__form {
+      input {
+        display: block;
+        width: 100%;
+        padding: 15px 13px;
+        border: 0;
+        border-radius: $radius-px;
+        outline: none;
+        margin-bottom: 15px;
+        background-color: $secondary-primary;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      .LogInPage__submit {
+        text-align: center;
+        margin-top: 30px;
+
+        button {
+          padding: 10px 16px;
+          cursor: pointer;
+          border-radius: $radius-px;
+          border: 0;
+          outline: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+
+    fieldset {
+      border: 0;
+    }
   }
 }
