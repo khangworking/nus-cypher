@@ -17,7 +17,7 @@ function Videos(props) {
     list({ pageToken }).then(results => {
       console.log(results)
       const { data: { items, nextPageToken } } = results
-      setVideos([...videos, ...items])
+      setVideos(videos => ([...videos, ...items]))
       setLoading(false)
       nextPage = nextPageToken
     })

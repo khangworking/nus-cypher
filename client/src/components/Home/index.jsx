@@ -10,18 +10,6 @@ function Home() {
       </section>
     </Lobby>
   )
-  // return (
-  //   <div className="HomePage">
-  //     <div className='tophead'></div>
-  //     <div className="sideleft"></div>
-  //     <div className="main">
-  //       <section className="most-popular">
-  //         <Videos />
-  //       </section>
-  //     </div>
-  //     <div className="sideright"></div>
-  //   </div>
-  // )
 }
 
 export default Home;

@@ -1,0 +1,17 @@
+@import '../../../variables';
+
+.Controls {
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+
+  .Controls__play,
+  .Controls__volumn {
+    color: white;
+    background-color: $dark-primary;
+    border: 0;
+    cursor: pointer;
+    padding: 10px 30px;
+    outline: none;
+  }
+}
