@@ -1,10 +1,13 @@
 import './LogIn.scss'
+import { useHistory } from 'react-router-dom'
 
 function LogIn() {
+  const history = useHistory()
   const handleSubmit = (e) => {
     e.preventDefault()
     let formData = new FormData(e.target)
     console.log(Object.fromEntries(formData.entries()))
+    history.push('/home')
   }
 
   return (

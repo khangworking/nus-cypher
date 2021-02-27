@@ -28,7 +28,6 @@
         border-radius: $radius-px;
         outline: none;
         margin-bottom: 15px;
-        background-color: $secondary-primary;
         font-size: 1.1rem;
         font-weight: bold;
       }
@@ -46,14 +45,10 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: bold;
-          background-color: $primary;
-          color: white;
+          display: block;
+          width: 100%;
         }
       }
-    }
-
-    fieldset {
-      border: 0;
     }
   }
 }

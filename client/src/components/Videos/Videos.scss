@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.Videos {
+  .Videos__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  .Videos__button-wrapper {
+    text-align: center;
+  }
+
+  .Videos__more-button {
+    border: 0;
+    outline: none;
+    background-color: $dark-primary;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+}

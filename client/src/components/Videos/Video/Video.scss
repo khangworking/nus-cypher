@@ -1,0 +1,32 @@
+@import '../../../variables';
+
+.Video {
+  padding: 10px 20px;
+
+  .Video__thumbnail {
+    padding-top: 56.25%;
+    background-color: $dark-primary;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+
+    & > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    & > .overlay {
+      z-index: 1;
+    }
+  }
+
+  .Video__title {
+    font-weight: bold;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+}
