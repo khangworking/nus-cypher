@@ -4,6 +4,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 let nextPage
+const YOUTUBE_VIDEOS_URL = 'https://www.googleapis.com/youtube/v3/videos'
 
 function Videos(props) {
   const [videos, setVideos] = useState([])
@@ -24,12 +25,12 @@ function Videos(props) {
     }
     if (!!pageToken)
       params['pageToken'] = pageToken
-    axios.get('https://www.googleapis.com/youtube/v3/videos', { params }).then(results => {
+    axios.get(YOUTUBE_VIDEOS_URL, { params }).then(results => {
       console.log(results)
       const { data: { items, nextPageToken } } = results
       setVideos([...videos, ...items])
-      nextPage = nextPageToken
       setLoading(false)
+      nextPage = nextPageToken
     })
   }, [pageToken])
 

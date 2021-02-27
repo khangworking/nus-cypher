@@ -1,0 +1,35 @@
+@import '../../variables';
+
+.Lobby {
+  height: 100vh;
+  overflow: auto;
+  display: grid;
+  color: white;
+  grid-template-rows: 60px auto;
+  grid-template-columns: 80px auto 450px;
+  grid-template-areas:
+    "tophead tophead tophead"
+    "sideleft main sideright";
+
+  .sideleft {
+    grid-area: sideleft;
+    background-color: $dark-primary;
+    overflow: auto;
+  }
+
+  .main {
+    grid-area: main;
+    overflow: auto;
+  }
+
+  .sideright {
+    grid-area: sideright;
+    background-color: $dark-primary;
+    overflow: auto;
+  }
+
+  .tophead {
+    grid-area: tophead;
+    background-color: $dark-primary;
+  }
+}
