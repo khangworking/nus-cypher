@@ -18,7 +18,7 @@ function Videos(props) {
       maxResults: '12',
       videoCategoryId: '10',
       regionCode: 'VN',
-      key: 'AIzaSyAGr4ma1QlUDjselmEvcf0gK54Hm2Pk06E'
+      key: process.env.REACT_APP_YOUTUBE_API_KEY
     }
     if (!!pageToken)
       params['pageToken'] = pageToken
