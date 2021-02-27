@@ -8,10 +8,12 @@ let nextPage
 function Videos(props) {
   const [videos, setVideos] = useState([])
   const [pageToken, setPageToken] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   const handleClick = e => setPageToken(nextPage)
 
   useEffect(() => {
+    setLoading(true)
     let params = {
       part: 'snippet,contentDetails,statistics,player',
       chart: 'mostPopular',
@@ -27,6 +29,7 @@ function Videos(props) {
       const { data: { items, nextPageToken } } = results
       setVideos([...videos, ...items])
       nextPage = nextPageToken
+      setLoading(false)
     })
   }, [pageToken])
 
@@ -36,7 +39,9 @@ function Videos(props) {
         {videos.map(video => <Video key={video.id} video={video} />)}
       </div>
       {!!videos.length && (<div className="Videos__button-wrapper">
-                    <button onClick={handleClick} className="Videos__more-button">Load more</button>
+                    <button onClick={handleClick} className="Videos__more-button">
+                      {loading ? <i className="fas fa-spinner"></i> : 'Load more'}
+                    </button>
                   </div>)}
     </div>
   )
