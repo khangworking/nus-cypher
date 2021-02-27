@@ -5,8 +5,8 @@
   overflow: auto;
   display: grid;
   color: white;
-  grid-template-rows: 60px auto;
-  grid-template-columns: 80px auto 450px;
+  grid-template-rows: 40px auto;
+  grid-template-columns: 5% auto 25%;
   grid-template-areas:
     "tophead tophead tophead"
     "sideleft main sideright";
